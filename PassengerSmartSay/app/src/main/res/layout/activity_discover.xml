@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Discover"
+    android:background="@drawable/backgroundvertical">
+
+    <com.newpoi.m1049769.smartsaypassengerextracted.Views.Discover.LibUtils.RadarScanView
+        android:id="@+id/radarScanView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <Switch
+        android:id="@+id/discoverSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="33dp"
+        android:text="Connect"
+        android:textColor="@color/colorWhite"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="33dp" />
+
+    <TextView
+        android:id="@+id/searchingInfoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="75dp"
+        android:text="Connecting to Ground Staff \10 Please Wait..."
+        android:textColor="@color/colorWhite"
+        android:visibility="gone" />
+
+</RelativeLayout>

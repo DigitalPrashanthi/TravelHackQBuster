@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/backgroundvertical">
+
+    <RelativeLayout
+        android:id="@+id/radar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <com.smartsay.qbuster.LibUtils.RadarScanView
+            android:id="@+id/radarScanView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <com.smartsay.qbuster.LibUtils.RandomTextView
+            android:id="@+id/random_textview"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true" >
+
+
+        </com.smartsay.qbuster.LibUtils.RandomTextView>
+
+        <Switch
+            android:id="@+id/discoverSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="38dp"
+            android:layout_marginEnd="33dp"
+            android:text="Connect"
+            android:textColor="@color/colorWhite"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="33dp" />
+
+        <TextView
+            android:id="@+id/endPointName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/random_textview"
+            android:layout_alignTop="@+id/discoverSwitch"
+            android:textColor="@color/colorWhite"
+            android:visibility="visible"
+            android:text=""
+            android:layout_alignLeft="@+id/random_textview" />
+
+        <TextView
+            android:id="@+id/searchingInfoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="75dp"
+            android:gravity="center"
+            android:text="@string/switchOn"
+            android:textColor="@color/colorWhite"
+            android:visibility="visible"
+            android:textSize="16sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/timer_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/titleMsg_TV"
+            android:layout_width="133dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="@string/reach_gate"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite" />
+
+        <ProgressBar
+            android:id="@+id/progressBarCircle"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="270dp"
+            android:layout_height="270dp"
+            android:layout_below="@+id/titleMsg_TV"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-4dp"
+            android:background="@drawable/drawable_circle_dark_blue"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="100"
+            android:progressDrawable="@drawable/drawable_circle_yellow"
+            android:rotation="-90" />
+
+        <TextView
+            android:id="@+id/textViewTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="206dp"
+            android:text=""
+            android:textColor="@color/colorWhite"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewTime"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="Time Left"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite" />
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView3"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal"
+            android:textColor="@color/colorWhite"
+            android:weightSum="1"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/pplIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/people" />
+
+                <TextView
+                    android:id="@+id/passengercount_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/peopletext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="People"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/boardingGateIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/plane_notification" />
+
+                <TextView
+                    android:id="@+id/boardingGate_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="5C"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/boardingGatetext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Boarding Gate"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll2"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:textColor="@color/colorWhite"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/localTimeIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/timer" />
+
+                <TextClock
+                    android:id="@+id/digitalClock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:format12Hour="hh:mm:ss a"
+                    android:text="Clock"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite"
+                    tools:ignore="NewApi" />
+
+                <TextView
+                    android:id="@+id/localtimetext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Current Time"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/clockIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/timer" />
+
+                <TextView
+                    android:id="@+id/boardingTimetv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="12:45pm"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/timeleftfixedtext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Boarding Time"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/close_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_toEndOf="@+id/view_ticktock_countdown"
+            android:clickable="true"
+            android:visibility="gone"
+            app:backgroundTint="@color/colorPrimary"
+            app:srcCompat="@android:drawable/arrow_up_float"
+            tools:ignore="UnknownId"
+            android:layout_toRightOf="@+id/view_ticktock_countdown" />
+
+    </RelativeLayout>
+
+
+</FrameLayout>

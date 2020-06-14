@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundvertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/radar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <com.smartsay.qbuster.LibUtils.RadarScanView
+            android:id="@+id/radarScanView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <com.smartsay.qbuster.LibUtils.RandomTextView
+            android:id="@+id/random_textview"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true" />
+
+        <Switch
+            android:id="@+id/discoverSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="38dp"
+            android:layout_marginEnd="33dp"
+            android:text="Connect"
+            android:textColor="@color/colorWhite"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="33dp" />
+
+        <TextView
+            android:id="@+id/endPointName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/random_textview"
+            android:layout_alignTop="@+id/discoverSwitch"
+            android:textColor="@color/colorWhite"
+            android:visibility="visible"
+            android:text=""
+            android:layout_alignLeft="@+id/random_textview" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/time_gate_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Send Details"
+            android:textColor="@android:color/white"
+            android:padding="05dp"
+            android:textSize="16sp"
+            android:layout_margin="10dp"
+            android:visibility="visible"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/wait_time_et"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:background="@drawable/edit_box_bg"
+                android:gravity="center"
+                android:inputType="number"
+                android:hint="Enter wait time"
+                android:maxLines="1" />
+
+            <Button
+                android:id="@+id/id_send_time"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_green_dark"
+                android:text="Send Time"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/gate_num_et"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:background="@drawable/edit_box_bg"
+                android:gravity="center"
+                android:inputType="text"
+                android:hint="Enter Gate Number"
+                android:maxLines="1" />
+
+            <Button
+                android:id="@+id/id_send_gate"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_green_dark"
+                android:text="Send Gate Number"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/five_min"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_green_dark"
+                    android:text="5 Min"
+                    android:layout_margin="20dp"/>
+
+                <Button
+                    android:id="@+id/ten_min"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_green_dark"
+                    android:text="10 Min"
+                    android:layout_margin="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/fifteen_min"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_green_dark"
+                    android:text="15 Min"
+                    android:layout_margin="20dp"/>
+
+                <Button
+                    android:id="@+id/twenty_min"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_green_dark"
+                    android:text="20 Min"
+                    android:layout_margin="20dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Send Gate Number"
+                android:textColor="@android:color/white"
+                android:padding="05dp"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/gate_a"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_green_dark"
+                    android:text="Gate 1A"
+                    android:layout_margin="20dp"/>
+
+                <Button
+                    android:id="@+id/gate_b"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_green_dark"
+                    android:text="Gate 5B"
+                    android:layout_margin="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/gate_c"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_green_dark"
+                    android:text="Gate 8C"
+                    android:layout_margin="20dp"/>
+
+                <Button
+                    android:id="@+id/gate_f"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_green_dark"
+                    android:text="Gate 6F"
+                    android:layout_margin="20dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/id_send"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:background="@color/colorPrimary"
+        android:text="Start"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="10dp"
+        android:visibility="gone"/>
+
+</FrameLayout>

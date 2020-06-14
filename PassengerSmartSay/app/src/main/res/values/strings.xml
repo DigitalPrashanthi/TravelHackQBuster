@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SSPassenger</string>
+    <string name="passenger">Passenger</string>
+    <string name="hi">Hi !</string>
+    <string name="welcomeMsg2">Dont waste your time in long queues!</string>
+    <string name="welcomeMsg1">Let\'s make it easy</string>
+    <string name="join">Join</string>
+
+    <string name="switchOn">Switch On the connection to establish connection with ground staff</string>
+    <string name="tryingConnection">Please Wait…\n We are trying to establish connection with ground staff.</string>
+    <string name="connectionEstablished">Connection Established</string>
+    <string name="reach_gate">Please reach the boarding point by the time</string>
+
+</resources>
